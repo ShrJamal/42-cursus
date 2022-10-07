@@ -6,7 +6,7 @@
 /*   By: jasahrao <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 11:35:37 by jasahrao          #+#    #+#             */
-/*   Updated: 2022/10/06 13:27:24 by jasahrao         ###   ########.fr       */
+/*   Updated: 2022/10/07 17:31:38 by jasahrao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ void	*ft_calloc(size_t count, size_t size)
 	return (res);
 }
 
-int	main(void)
-{
-	char *str = ft_calloc(3, sizeof(char));
-	printf("str %s", str);
-}
+// int	main(void)
+// {
+// 	char *str = ft_calloc(3, sizeof(char));
+// 	printf("str %s", str);
+// }
