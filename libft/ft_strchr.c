@@ -6,7 +6,7 @@
 /*   By: jasahrao <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 12:01:29 by jasahrao          #+#    #+#             */
-/*   Updated: 2022/10/06 13:42:56 by jasahrao         ###   ########.fr       */
+/*   Updated: 2022/10/07 14:38:49 by jasahrao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,12 +28,12 @@ char	*ft_strchr(const char *s, int c)
 	return (0);
 }
 
-int main()
-{
-	printf("Res:%s\n", ft_strchr("Hello", 'e'));
-	printf("Res:%s\n", ft_strchr("Hello", 'l'));
-	printf("Res:%s\n", ft_strchr("Hello", ' '));
-	printf("Res:%s\n", ft_strchr("Hello", '\0'));
-	printf("Res:%s\n", ft_strchr("", ' '));
-	printf("Res:%s\n", ft_strchr("", 'a'));
-}
+// int main()
+// {
+// 	printf("Res:%s\n", ft_strchr("Hello", 'e'));
+// 	printf("Res:%s\n", ft_strchr("Hello", 'l'));
+// 	printf("Res:%s\n", ft_strchr("Hello", ' '));
+// 	printf("Res:%s\n", ft_strchr("Hello", '\0'));
+// 	printf("Res:%s\n", ft_strchr("", ' '));
+// 	printf("Res:%s\n", ft_strchr("", 'a'));
+// }
