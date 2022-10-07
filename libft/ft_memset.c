@@ -1,30 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jasahrao <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/06 12:00:11 by jasahrao          #+#    #+#             */
-/*   Updated: 2022/10/07 14:36:57 by jasahrao         ###   ########.fr       */
+/*   Created: 2022/10/07 14:41:01 by jasahrao          #+#    #+#             */
+/*   Updated: 2022/10/07 14:56:07 by jasahrao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *s)
+void	*ft_memset(void *b, int c, size_t len)
 {
-	size_t	l;
-
-	l = 0;
-	while (s[l])
-		l++;
-	return (l);
+	while (len--)
+		((unsigned char *)b)[len] = (unsigned char)c;
+	return (b);
 }
 
 // int main()
 // {
-// 	printf("Strlen: %zu\n", ft_strlen("abc"));
-// 	printf("Strlen: %zu\n", ft_strlen(""));
-// 	printf("Strlen: %zu\n", ft_strlen("123456789"));
+// 	char str[] = "abcdef";
+// 	ft_memset(str, 'c', 6);
+// 	printf("%s\n", str);
 // }
