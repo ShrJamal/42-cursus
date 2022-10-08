@@ -6,7 +6,7 @@
 /*   By: jasahrao <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 17:10:36 by jasahrao          #+#    #+#             */
-/*   Updated: 2022/10/07 17:37:14 by jasahrao         ###   ########.fr       */
+/*   Updated: 2022/10/08 19:09:25 by jasahrao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,22 +15,20 @@
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*substr;
-	size_t	i;
 	size_t	slen;
+	size_t	i;
 
+	if (len == 0)
+		return (0);
 	slen = ft_strlen(s);
-	if (!s)
-		return (0);
-	if (start >= ft_strlen(s))
-		return ((char *)ft_calloc(1, sizeof(char)));
-	if (start + len >= slen)
-		substr = malloc(sizeof(char) * (slen - start + 1));
+	if (slen <=  start)
+		return ft_calloc(1, sizeof(char));
+	else if (slen <= start + len)
+		substr = malloc((slen - start + 1) * sizeof(char));
 	else
-		substr = malloc(sizeof(char) * (len + 1));
-	if (!substr)
-		return (0);
+		substr = malloc((len + 1) * sizeof(char));
 	i = 0;
-	while (s[start + i] && i < len)
+	while (i < len && s[start + i])
 	{
 		substr[i] = s[start + i];
 		i++;
@@ -43,6 +41,6 @@ int	main(void)
 {
 	printf("%s\n", ft_substr("Helloo", 2, 5));
 	printf("%s\n", ft_substr("Helloo", 4, 10));
-	printf("%s\n", ft_substr("Helloo", 0, 10));
-	printf("%s\n", ft_substr("Helloo", 10, 10));
+	printf("%s\n", ft_substr("Helloo", 0, 3));
+	printf("%s\n", ft_substr("Helloo", 10, 1));
 }
