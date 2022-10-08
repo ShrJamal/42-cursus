@@ -6,7 +6,7 @@
 /*   By: jasahrao <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 15:20:29 by jasahrao          #+#    #+#             */
-/*   Updated: 2022/10/07 15:39:53 by jasahrao         ###   ########.fr       */
+/*   Updated: 2022/10/08 20:17:25 by jasahrao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char	*ft_strdup(const char *s1)
 {
 	char	*dst;
 	size_t	len;
-	int		i;
+	size_t	i;
 
 	len = ft_strlen(s1);
 	dst = malloc((len + 1) * sizeof(char));
@@ -31,3 +31,10 @@ char	*ft_strdup(const char *s1)
 	dst[i] = '\0';
 	return (dst);
 }
+
+// int main()
+// {
+// 	printf("%s\n", ft_strdup("Helloo"));
+// 	printf("%s\n", ft_strdup(""));
+// 	printf("%s\n", ft_strdup("A"));
+// }
