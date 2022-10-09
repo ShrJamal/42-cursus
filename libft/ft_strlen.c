@@ -6,7 +6,7 @@
 /*   By: jasahrao <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 12:00:11 by jasahrao          #+#    #+#             */
-/*   Updated: 2022/10/07 14:36:57 by jasahrao         ###   ########.fr       */
+/*   Updated: 2022/10/09 14:59:44 by jasahrao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,10 @@ size_t	ft_strlen(const char *s)
 	return (l);
 }
 
-// int main()
-// {
-// 	printf("Strlen: %zu\n", ft_strlen("abc"));
-// 	printf("Strlen: %zu\n", ft_strlen(""));
-// 	printf("Strlen: %zu\n", ft_strlen("123456789"));
-// }
+/* int main()
+{
+	printf("Strlen: %zu\n", ft_strlen("abc"));
+	printf("Strlen: %zu\n", ft_strlen(""));
+	printf("Strlen: %zu\n", ft_strlen("123456789"));
+}
+ */

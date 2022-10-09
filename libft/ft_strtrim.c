@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jasahrao <jasahrao@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jasahrao <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 19:27:14 by jasahrao          #+#    #+#             */
-/*   Updated: 2022/10/09 12:52:31 by jasahrao         ###   ########.fr       */
+/*   Updated: 2022/10/09 14:59:44 by jasahrao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,14 +44,14 @@ char	*ft_strtrim(char const *s1, char const *set)
 	return (ft_substr(s1, start, (end - start + 1)));
 }
 
-// int	main(void)
-// {
-// 	printf("$%s$\n", ft_strtrim("   Hello   ", " "));
-// 	printf("$%s$\n", ft_strtrim("   He llo   ", " "));
-// 	printf("$%s$\n", ft_strtrim(",,  ,,He,llo,,", ","));
-// 	printf("$%s$\n", ft_strtrim(", , , He , llo, , , ", ", "));
-// 	printf("$%s$\n", ft_strtrim("   Hello   ", ""));
-// 	printf("$%s$\n", ft_strtrim(" ", " "));
-// 	printf("$%s$\n", ft_strtrim("", " "));
-// 	printf("$%s$\n", ft_strtrim("", ""));
-// }
+/* int	main(void)
+{
+	printf("$%s$\n", ft_strtrim("   Hello   ", " "));
+	printf("$%s$\n", ft_strtrim("   He llo   ", " "));
+	printf("$%s$\n", ft_strtrim(",,  ,,He,llo,,", ","));
+	printf("$%s$\n", ft_strtrim(", , , He , llo, , , ", ", "));
+	printf("$%s$\n", ft_strtrim("   Hello   ", ""));
+	printf("$%s$\n", ft_strtrim(" ", " "));
+	printf("$%s$\n", ft_strtrim("", " "));
+	printf("$%s$\n", ft_strtrim("", ""));
+} */

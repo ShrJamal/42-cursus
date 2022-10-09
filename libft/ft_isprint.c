@@ -6,7 +6,7 @@
 /*   By: jasahrao <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 11:56:16 by jasahrao          #+#    #+#             */
-/*   Updated: 2022/10/06 11:56:17 by jasahrao         ###   ########.fr       */
+/*   Updated: 2022/10/09 14:56:49 by jasahrao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,3 +14,11 @@ int	ft_isprint(int c)
 {
 	return (c >= 32 && c <= 126);
 }
+
+/* int main()
+{
+	printf("%d\n", ft_isprint(48));
+	printf("%d\n", ft_isprint('1'));
+	printf("%d\n", ft_isprint(0));
+	printf("%d\n", ft_isprint(127));
+} */

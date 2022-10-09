@@ -6,7 +6,7 @@
 /*   By: jasahrao <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 19:11:55 by jasahrao          #+#    #+#             */
-/*   Updated: 2022/10/08 19:18:08 by jasahrao         ###   ########.fr       */
+/*   Updated: 2022/10/09 14:59:44 by jasahrao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,11 +36,11 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	return (res);
 }
 
-// int	main(void)
-// {
-// 	printf("%s\n", ft_strjoin("Hello ", "World!"));
-// 	printf("%s\n", ft_strjoin("A", "B"));
-// 	printf("%s\n", ft_strjoin("", "B"));
-// 	printf("%s\n", ft_strjoin("A", ""));
-// 	printf("%s\n", ft_strjoin("", ""));
-// }
+/* int	main(void)
+{
+	printf("%s\n", ft_strjoin("Hello ", "World!"));
+	printf("%s\n", ft_strjoin("A", "B"));
+	printf("%s\n", ft_strjoin("", "B"));
+	printf("%s\n", ft_strjoin("A", ""));
+	printf("%s\n", ft_strjoin("", ""));
+} */

@@ -6,7 +6,7 @@
 /*   By: jasahrao <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 11:58:09 by jasahrao          #+#    #+#             */
-/*   Updated: 2022/10/06 13:32:48 by jasahrao         ###   ########.fr       */
+/*   Updated: 2022/10/09 14:59:44 by jasahrao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,10 @@ int	ft_tolower(int c)
 	return (c);
 }
 
-// int	main(void)
-// {
-// 	printf("lower: %c\n", ft_tolower('A'));
-// 	printf("lower: %c\n", ft_tolower('M'));
-// 	printf("lower: %c\n", ft_tolower(' '));
-// 	printf("lower: %c\n", ft_tolower('Z'));
-// }
+/* int	main(void)
+{
+	printf("lower: %c\n", ft_tolower('A'));
+	printf("lower: %c\n", ft_tolower('M'));
+	printf("lower: %c\n", ft_tolower(' '));
+	printf("lower: %c\n", ft_tolower('Z'));
+} */

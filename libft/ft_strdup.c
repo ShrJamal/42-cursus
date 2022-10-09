@@ -6,7 +6,7 @@
 /*   By: jasahrao <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 15:20:29 by jasahrao          #+#    #+#             */
-/*   Updated: 2022/10/08 20:17:25 by jasahrao         ###   ########.fr       */
+/*   Updated: 2022/10/09 14:59:44 by jasahrao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,9 @@ char	*ft_strdup(const char *s1)
 	return (dst);
 }
 
-// int main()
-// {
-// 	printf("%s\n", ft_strdup("Helloo"));
-// 	printf("%s\n", ft_strdup(""));
-// 	printf("%s\n", ft_strdup("A"));
-// }
+/* int main()
+{
+	printf("%s\n", ft_strdup("Helloo"));
+	printf("%s\n", ft_strdup(""));
+	printf("%s\n", ft_strdup("A"));
+} */
