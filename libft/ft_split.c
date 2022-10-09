@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jasahrao <jasahrao@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jasahrao <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 12:33:17 by jasahrao          #+#    #+#             */
-/*   Updated: 2022/10/09 13:29:01 by jasahrao         ###   ########.fr       */
+/*   Updated: 2022/10/09 15:03:25 by jasahrao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	**ft_malloc_err(char **arr)
+static char	**ft_malloc_err(char **arr)
 {
 	while (*arr)
 	{
@@ -23,7 +23,7 @@ char	**ft_malloc_err(char **arr)
 	return (NULL);
 }
 
-int	ft_words_count(char const *s, char c)
+static int	ft_words_count(char const *s, char c)
 {
 	int	wc;
 
@@ -40,7 +40,7 @@ int	ft_words_count(char const *s, char c)
 	return (wc);
 }
 
-char	*ft_word(char const *s, char c, int *j)
+static char	*ft_word(char const *s, char c, int *j)
 {
 	char	*word;
 	int		i;
