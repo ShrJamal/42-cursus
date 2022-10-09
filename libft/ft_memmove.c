@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jasahrao <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jasahrao <jasahrao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 08:58:22 by jasahrao          #+#    #+#             */
-/*   Updated: 2022/10/08 18:22:36 by jasahrao         ###   ########.fr       */
+/*   Updated: 2022/10/09 12:36:57 by jasahrao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,5 +32,6 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 // int	main()
 // {
 // 	char src[] = "Hello!";
-// 	printf("%s\n", (char *) ft_memmove(src + 1, src, 5));
+// 	char dest[] = src + 1;
+// 	printf("%s\n", (char *) ft_memmove(dest, src, 5));
 // }

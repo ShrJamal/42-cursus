@@ -6,7 +6,7 @@
 /*   By: jasahrao <jasahrao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 11:53:44 by jasahrao          #+#    #+#             */
-/*   Updated: 2022/10/08 21:45:47 by jasahrao         ###   ########.fr       */
+/*   Updated: 2022/10/09 13:24:01 by jasahrao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 int	ft_isalnum(int c)
 {
-	return ft_isdigit(c) || ft_isalpha(c);
+	return (ft_isdigit(c) || ft_isalpha(c));
 }

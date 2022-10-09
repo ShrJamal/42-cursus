@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jasahrao <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jasahrao <jasahrao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 12:06:26 by jasahrao          #+#    #+#             */
-/*   Updated: 2022/10/07 14:38:39 by jasahrao         ###   ########.fr       */
+/*   Updated: 2022/10/09 13:25:00 by jasahrao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include  "libft.h"
+#include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
 {
@@ -19,9 +19,9 @@ char	*ft_strrchr(const char *s, int c)
 	i = ft_strlen(s);
 	while (i-- > 0)
 		if (s[i] == c)
-			return (char *)&s[i];
+			return ((char *)&s[i]);
 	if (c == '\0' && i >= 0)
-		return (char *)&s[i];
+		return ((char *)&s[i]);
 	return (0);
 }
 
