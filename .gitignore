@@ -1,3 +1,12 @@
 .DS_Store
+.vscode
+.idea
+a.out
+main
+*dSYM
+tempCodeRunnerFile*
 *.o
+*.a
+*gch
+cmake-build*
 libft.a
