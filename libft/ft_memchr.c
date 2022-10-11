@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jasahrao <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jasahrao <jasahrao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 14:56:41 by jasahrao          #+#    #+#             */
-/*   Updated: 2022/10/11 09:30:20 by jasahrao         ###   ########.fr       */
+/*   Updated: 2022/10/11 10:52:19 by jasahrao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,3 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
-
-/* int main(){
-	printf("%s\n", (unsigned char*) ft_memchr("Hello", 'e', 5));
-	printf("%s\n", (unsigned char*) ft_memchr("Hello", 'l', 5));
-	printf("%s\n", (unsigned char*) ft_memchr("Hello", '\0', 5));
-} */

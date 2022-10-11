@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jasahrao <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jasahrao <jasahrao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 09:36:09 by jasahrao          #+#    #+#             */
-/*   Updated: 2022/10/11 09:46:04 by jasahrao         ###   ########.fr       */
+/*   Updated: 2022/10/11 10:53:49 by jasahrao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,16 +25,3 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 		i++;
 	}
 }
-
-/* static void	upper(unsigned int i, char *c)
-{
-	*c = ft_toupper(*c);
-}
-
-int	main(void)
-{
-	char str[] = "Aabcd";
-	ft_striteri(str, &upper);
-	printf("%s\n", str);
-}
- */

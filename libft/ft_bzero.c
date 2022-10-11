@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jasahrao <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jasahrao <jasahrao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 11:02:02 by jasahrao          #+#    #+#             */
-/*   Updated: 2022/10/07 17:32:08 by jasahrao         ###   ########.fr       */
+/*   Updated: 2022/10/11 10:53:49 by jasahrao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,3 @@ void	ft_bzero(void *s, size_t n)
 	while (n--)
 		*((char *)(s + n)) = 0;
 }
-
-// int	main(void)
-// {
-// 	char	str[] = "abcsd";
-
-// 	ft_bzero(str, 2);
-// 	printf("res: $%s$", str);
-// }

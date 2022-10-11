@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jasahrao <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jasahrao <jasahrao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 08:03:24 by jasahrao          #+#    #+#             */
-/*   Updated: 2022/10/11 09:30:20 by jasahrao         ###   ########.fr       */
+/*   Updated: 2022/10/11 10:52:45 by jasahrao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,3 @@ void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
 	}
 	return (dst);
 }
-
-/* int	main()
-{
-	char src[] = "Hello!";
-	char dest[] = "World";
-	printf("%s\n", (char *) ft_memmove(dest, src, 6));
-} */

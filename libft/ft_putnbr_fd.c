@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jasahrao <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jasahrao <jasahrao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 10:04:14 by jasahrao          #+#    #+#             */
-/*   Updated: 2022/10/11 10:14:29 by jasahrao         ###   ########.fr       */
+/*   Updated: 2022/10/11 10:53:49 by jasahrao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,12 +30,3 @@ void	ft_putnbr_fd(int n, int fd)
 		ft_putchar_fd(nbr % 10 + '0', fd);
 	}
 }
-
-/* int	main(void)
-{
-	ft_putnbr_fd(42, 1);
-	ft_putchar_fd('\n', 1);
-	ft_putnbr_fd(-2147483648, 1);
-	ft_putchar_fd('\n', 1);
-	ft_putnbr_fd(-42, 1);
-} */

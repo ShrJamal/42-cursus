@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jasahrao <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jasahrao <jasahrao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 11:58:47 by jasahrao          #+#    #+#             */
-/*   Updated: 2022/10/09 14:59:44 by jasahrao         ###   ########.fr       */
+/*   Updated: 2022/10/11 10:52:31 by jasahrao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,3 @@ int	ft_toupper(int c)
 		return (c - 32);
 	return (c);
 }
-
-/* int main()
-{
-	printf("toupper: %c\n", ft_toupper('a'));
-	printf("toupper: %c\n", ft_toupper('m'));
-	printf("toupper: %c\n", ft_toupper(' '));
-	printf("toupper: %c\n", ft_toupper('z'));
-} */

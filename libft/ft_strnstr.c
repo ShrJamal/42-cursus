@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jasahrao <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jasahrao <jasahrao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 14:02:49 by jasahrao          #+#    #+#             */
-/*   Updated: 2022/10/11 09:30:42 by jasahrao         ###   ########.fr       */
+/*   Updated: 2022/10/11 11:53:47 by jasahrao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	while (haystack[i] && i < len)
 	{
 		j = 0;
-		while (needle[j] && haystack[i + j] == needle[j])
+		while (needle[j] && haystack[i + j] == needle[j] && (i + j) < len)
 		{
 			if (!needle[j + 1])
 				return ((char *)&haystack[i]);
@@ -33,32 +33,3 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	}
 	return (NULL);
 }
-
-/* int main()
-{
-	{
-		char str[] = "I'm learning c programming language";
-		char find[] = "programming";
-		printf("$%s$ - $%s$\n", ft_strnstr(str, find, 20), strstr(str, find));
-	}
-	{
-		char str[] = "I'm learning c programming language";
-		char find[] = "";
-		printf("$%s$ - $%s$\n", ft_strnstr(str, find, 20), strstr(str, find));
-	}
-	{
-		char str[] = "I'm learning c programming language";
-		char find[] = "java";
-		printf("$%s$ - $%s$\n", ft_strnstr(str, find, 20), strstr(str, find));
-	}
-	{
-		char str[] = "";
-		char find[] = "java";
-		printf("$%s$ - $%s$\n", ft_strnstr(str, find, 20), strstr(str, find));
-	}{
-		char str[] = "";
-		char find[] = "";
-		printf("$%s$ - $%s$\n", ft_strnstr(str, find, 20), strstr(str, find));
-	}
-}
- */

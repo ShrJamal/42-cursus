@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jasahrao <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jasahrao <jasahrao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 14:42:59 by jasahrao          #+#    #+#             */
-/*   Updated: 2022/10/09 15:20:43 by jasahrao         ###   ########.fr       */
+/*   Updated: 2022/10/11 10:53:49 by jasahrao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,16 +58,3 @@ char	*ft_itoa(int n)
 	}
 	return (res);
 }
-
-/* int	main(void)
-{
-	printf("%s\n", ft_itoa(123456789));
-	printf("%s\n", ft_itoa(-123456789));
-	printf("%s\n", ft_itoa(0));
-	printf("%s\n", ft_itoa(-0));
-	printf("%s\n", ft_itoa(-2147483648));
-	printf("%s\n", ft_itoa(2147483647));
-	printf("%s\n", ft_itoa(1));
-	printf("%s\n", ft_itoa(-1));
-}
- */

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jasahrao <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jasahrao <jasahrao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 17:10:36 by jasahrao          #+#    #+#             */
-/*   Updated: 2022/10/11 09:30:42 by jasahrao         ###   ########.fr       */
+/*   Updated: 2022/10/11 10:57:08 by jasahrao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,11 +36,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	substr[i] = '\0';
 	return (substr);
 }
-
-/* int	main(void)
-{
-	printf("%s\n", ft_substr("Helloo", 2, 5));
-	printf("%s\n", ft_substr("Helloo", 4, 10));
-	printf("%s\n", ft_substr("Helloo", 0, 3));
-	printf("%s\n", ft_substr("Helloo", 10, 1));
-} */

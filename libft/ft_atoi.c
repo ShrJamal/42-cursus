@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jasahrao <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jasahrao <jasahrao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 10:57:38 by jasahrao          #+#    #+#             */
-/*   Updated: 2022/10/06 13:16:18 by jasahrao         ###   ########.fr       */
+/*   Updated: 2022/10/11 10:53:49 by jasahrao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,16 +44,3 @@ int	ft_atoi(const char *str)
 	}
 	return (res * sign);
 }
-
-// int	main(void)
-// {
-// 	printf("$%d$\n", ft_atoi("-1325632167"));
-// 	printf("$%d$\n", ft_atoi("1325632167"));
-// 	printf("$%d$\n", ft_atoi("-2147483648"));
-// 	printf("$%d$\n", ft_atoi("\t-1234ab567"));
-// 	printf("$%d$\n", ft_atoi("\n+1234ab567"));
-// 	printf("$%d$\n", ft_atoi("2147483647"));
-// 	printf("$%d$\n", ft_atoi("0123a456789"));
-// 	printf("$%d$\n", ft_atoi("a123"));
-// 	printf("$%d$\n", ft_atoi(""));
-// }

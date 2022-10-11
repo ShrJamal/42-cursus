@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jasahrao <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jasahrao <jasahrao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 14:41:01 by jasahrao          #+#    #+#             */
-/*   Updated: 2022/10/09 14:58:08 by jasahrao         ###   ########.fr       */
+/*   Updated: 2022/10/11 10:52:19 by jasahrao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,3 @@ void	*ft_memset(void *b, int c, size_t len)
 		((unsigned char *)b)[len] = (unsigned char)c;
 	return (b);
 }
-
-/* int main()
-{
-	char str[] = "abcdef";
-	ft_memset(str, 'c', 6);
-	printf("%s\n", str);
-} */
