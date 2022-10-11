@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: jasahrao <jasahrao@student.42.fr>          +#+  +:+       +#+         #
+#    By: jasahrao <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/08 20:08:37 by jasahrao          #+#    #+#              #
-#    Updated: 2022/10/11 13:16:16 by jasahrao         ###   ########.fr        #
+#    Updated: 2022/10/11 16:00:19 by jasahrao         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,28 +18,28 @@ SRCS	=	ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_strlen.c \
 			ft_bzero.c ft_calloc.c ft_substr.c ft_strjoin.c ft_strtrim.c \
 			ft_split.c ft_itoa.c ft_strmapi.c ft_striteri.c ft_putchar_fd.c \
 			ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
-OBJS	=	${SRCS:.c=.o}
+OBJS	=	$(SRCS:.c=.o)
 INCS	=	libft.h
 CC		=	gcc
 FLAGS	=	-Wall -Werror -Wextra 
 AR		=	ar crs
 RM		=	rm -rf
 
-.o.c:	${INCS}
-		${CC} ${CFLAGS} -c $< -o ${<:.c=.o}  -I ${INCS}
+%.o: %.c $(INCS)
+	$(CC) $(CFLAGS) -c $< -o $(<:.c=.o)  -I $(INCS)
 
-${NAME}: ${OBJS}
-	${AR} ${NAME} ${OBJS}
-	#  ${CC} -o ${NAME} ${OBJS} 
-	# ${RM} ${OBJS}
+$(NAME): $(OBJS)
+	$(AR) $(NAME) $(OBJS)
+	#  $(CC) -o $(NAME) $(OBJS) 
+	# $(RM) $(OBJS)
 
-all: ${NAME}
+all: $(NAME)
 
 clean:
-	${RM} ${OBJS}
+	$(RM) $(OBJS)
 
 fclean: clean
-	${RM} ${NAME}
+	$(RM) $(NAME)
 
 re: fclean all
 
