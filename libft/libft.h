@@ -6,7 +6,7 @@
 /*   By: jasahrao <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 13:24:51 by jasahrao          #+#    #+#             */
-/*   Updated: 2022/10/11 09:59:55 by jasahrao         ###   ########.fr       */
+/*   Updated: 2022/10/11 10:01:56 by jasahrao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,5 +52,6 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
+void	ft_putendl_fd(char *s, int fd);
 
 #endif
