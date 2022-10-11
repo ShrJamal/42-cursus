@@ -6,7 +6,7 @@
 #    By: jasahrao <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/08 20:08:37 by jasahrao          #+#    #+#              #
-#    Updated: 2022/10/11 09:42:42 by jasahrao         ###   ########.fr        #
+#    Updated: 2022/10/11 09:50:56 by jasahrao         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ SRCS	=	ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_strlen.c \
 			ft_strnstr.c ft_strlcpy.c ft_strlcat.c ft_atoi.c ft_strdup.c \
 			ft_memcmp.c ft_memchr.c ft_memcpy.c ft_memmove.c ft_memset.c \
 			ft_bzero.c ft_calloc.c ft_substr.c ft_strjoin.c ft_strtrim.c \
-			ft_split.c ft_itoa.c ft_strmapi.c ft_striteri.c
+			ft_split.c ft_itoa.c ft_strmapi.c ft_striteri.c ft_putchar_fd.c
 OBJS	=	${SRCS:.c=.o}
 INCS	=	libft.h
 CC		=	gcc
