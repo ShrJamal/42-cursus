@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jasahrao <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jasahrao <jasahrao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 15:20:29 by jasahrao          #+#    #+#             */
-/*   Updated: 2022/10/11 09:33:46 by jasahrao         ###   ########.fr       */
+/*   Updated: 2022/10/11 10:57:08 by jasahrao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,3 @@ char	*ft_strdup(const char *s1)
 	dst[i] = '\0';
 	return (dst);
 }
-
-/* int main()
-{
-	printf("%s\n", ft_strdup("Helloo"));
-	printf("%s\n", ft_strdup(""));
-	printf("%s\n", ft_strdup("A"));
-} */

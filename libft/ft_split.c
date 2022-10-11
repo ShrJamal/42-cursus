@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jasahrao <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jasahrao <jasahrao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 12:33:17 by jasahrao          #+#    #+#             */
-/*   Updated: 2022/10/09 15:03:25 by jasahrao         ###   ########.fr       */
+/*   Updated: 2022/10/11 10:53:49 by jasahrao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,24 +83,3 @@ char	**ft_split(char const *s, char c)
 	res[i] = 0;
 	return (res);
 }
-
-/* int	main(void)
-{
-	{
-		char **res = ft_split("  Hi Im Learning C Programming Lang  ", ' ');
-		for (; *res; res++)
-			printf("$%s$ ", *res);
-	}
-	printf("\n");
-	{
-		char **res = ft_split(" ", ' ');
-		for (; *res; res++)
-			printf("$%s$ ", *res);
-	}
-	printf("\n");
-	{
-		char **res = ft_split(" A B C ", '\0');
-		for (; *res; res++)
-			printf("$%s$ ", *res);
-	}
-} */

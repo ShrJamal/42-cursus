@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jasahrao <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jasahrao <jasahrao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 19:11:55 by jasahrao          #+#    #+#             */
-/*   Updated: 2022/10/11 09:30:20 by jasahrao         ###   ########.fr       */
+/*   Updated: 2022/10/11 10:53:49 by jasahrao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,12 +35,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	res[i] = '\0';
 	return (res);
 }
-
-/* int	main(void)
-{
-	printf("%s\n", ft_strjoin("Hello ", "World!"));
-	printf("%s\n", ft_strjoin("A", "B"));
-	printf("%s\n", ft_strjoin("", "B"));
-	printf("%s\n", ft_strjoin("A", ""));
-	printf("%s\n", ft_strjoin("", ""));
-} */

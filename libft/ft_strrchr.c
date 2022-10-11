@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jasahrao <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jasahrao <jasahrao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 12:06:26 by jasahrao          #+#    #+#             */
-/*   Updated: 2022/10/11 09:33:46 by jasahrao         ###   ########.fr       */
+/*   Updated: 2022/10/11 10:52:31 by jasahrao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,16 +24,3 @@ char	*ft_strrchr(const char *s, int c)
 		return ((char *)&s[i]);
 	return (NULL);
 }
-
-/* int main()
-{
-	printf("Res:%s\n", strrchr("Hello", 'e'));
-	printf("Res:%s\n", strrchr("Hello", 'l'));
-	printf("Res:%s\n", strrchr("Hello", 'o'));
-	printf("Res:%s\n", strrchr("Hello", 'a'));
-	printf("Res:%s\n", strrchr("Hello", '\0'));
-	printf("Res:%s\n", strrchr("", ' '));
-	printf("Res:%s\n", strrchr("", 'a'));
-	printf("Res:%s\n", strrchr("", '\0'));
-}
- */

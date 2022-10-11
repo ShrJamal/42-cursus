@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: jasahrao <marvin@42.fr>                    +#+  +:+       +#+         #
+#    By: jasahrao <jasahrao@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/08 20:08:37 by jasahrao          #+#    #+#              #
-#    Updated: 2022/10/11 10:03:49 by jasahrao         ###   ########.fr        #
+#    Updated: 2022/10/11 10:45:39 by jasahrao         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,8 +29,9 @@ RM		=	rm -rf
 		${CC} ${CFLAGS} -c $< -o ${<:.c=.o}  -I ${INCS}
 
 ${NAME}: ${OBJS}
-	${CC} -o ${NAME} ${OBJS} 
+	${AR} ${NAME} ${OBJS}
 	${RM} ${OBJS}
+	#  ${CC} -o ${NAME} ${OBJS} 
 
 all: ${NAME}
 

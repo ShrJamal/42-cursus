@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jasahrao <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jasahrao <jasahrao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 17:46:05 by jasahrao          #+#    #+#             */
-/*   Updated: 2022/10/11 09:30:20 by jasahrao         ###   ########.fr       */
+/*   Updated: 2022/10/11 10:57:08 by jasahrao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,15 +33,3 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	res[i] = '\0';
 	return (res);
 }
-
-char	ft_lowercase(unsigned int i, char c)
-{
-	return (ft_tolower(c));
-}
-
-// int	main(void)
-// {
-// 	printf("%s\n", ft_strmapi("ABCD", &ft_lowercase));
-// 	printf("%s\n", ft_strmapi("AbcD", &ft_lowercase));
-// 	printf("%s\n", ft_strmapi("", &ft_lowercase));
-// }

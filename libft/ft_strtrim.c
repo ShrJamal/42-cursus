@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jasahrao <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jasahrao <jasahrao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 19:27:14 by jasahrao          #+#    #+#             */
-/*   Updated: 2022/10/09 15:04:04 by jasahrao         ###   ########.fr       */
+/*   Updated: 2022/10/11 10:57:08 by jasahrao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,15 +43,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 		return (ft_calloc(1, sizeof(char)));
 	return (ft_substr(s1, start, (end - start + 1)));
 }
-
-/* int	main(void)
-{
-	printf("$%s$\n", ft_strtrim("   Hello   ", " "));
-	printf("$%s$\n", ft_strtrim("   He llo   ", " "));
-	printf("$%s$\n", ft_strtrim(",,  ,,He,llo,,", ","));
-	printf("$%s$\n", ft_strtrim(", , , He , llo, , , ", ", "));
-	printf("$%s$\n", ft_strtrim("   Hello   ", ""));
-	printf("$%s$\n", ft_strtrim(" ", " "));
-	printf("$%s$\n", ft_strtrim("", " "));
-	printf("$%s$\n", ft_strtrim("", ""));
-} */
