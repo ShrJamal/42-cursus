@@ -6,7 +6,7 @@
 /*   By: jasahrao <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 14:56:41 by jasahrao          #+#    #+#             */
-/*   Updated: 2022/10/09 14:57:16 by jasahrao         ###   ########.fr       */
+/*   Updated: 2022/10/11 09:30:20 by jasahrao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 			return ((void *)(s + i));
 		i++;
 	}
-	return (0);
+	return (NULL);
 }
 
 /* int main(){

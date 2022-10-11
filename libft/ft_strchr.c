@@ -6,7 +6,7 @@
 /*   By: jasahrao <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 12:01:29 by jasahrao          #+#    #+#             */
-/*   Updated: 2022/10/09 14:59:44 by jasahrao         ###   ########.fr       */
+/*   Updated: 2022/10/11 09:30:20 by jasahrao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	*ft_strchr(const char *s, int c)
 	}
 	if (c == '\0')
 		return ((char *)&s[i]);
-	return (0);
+	return (NULL);
 }
 
 /* int main()

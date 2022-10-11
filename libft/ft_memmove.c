@@ -6,7 +6,7 @@
 /*   By: jasahrao <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 08:58:22 by jasahrao          #+#    #+#             */
-/*   Updated: 2022/10/09 14:57:49 by jasahrao         ###   ########.fr       */
+/*   Updated: 2022/10/11 09:33:46 by jasahrao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	unsigned char	*s;
 
 	if (!dst && !src)
-		return (0);
+		return (NULL);
 	s = (unsigned char *)src;
 	d = (unsigned char *)dst;
 	if (d < s)
