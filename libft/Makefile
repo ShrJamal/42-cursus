@@ -6,7 +6,7 @@
 #    By: jasahrao <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/08 20:08:37 by jasahrao          #+#    #+#              #
-#    Updated: 2022/10/11 16:00:19 by jasahrao         ###   ########.fr        #
+#    Updated: 2022/10/12 10:39:37 by jasahrao         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,8 +19,10 @@ SRCS	=	ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_strlen.c \
 			ft_split.c ft_itoa.c ft_strmapi.c ft_striteri.c ft_putchar_fd.c \
 			ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
 OBJS	=	$(SRCS:.c=.o)
+BSRCS	=	ft_lstnew.c
+BOBJS	=	$(BSRCS:.c=.o)
 INCS	=	libft.h
-CC		=	gcc
+CC		=	cc
 FLAGS	=	-Wall -Werror -Wextra 
 AR		=	ar crs
 RM		=	rm -rf
@@ -30,10 +32,11 @@ RM		=	rm -rf
 
 $(NAME): $(OBJS)
 	$(AR) $(NAME) $(OBJS)
-	#  $(CC) -o $(NAME) $(OBJS) 
-	# $(RM) $(OBJS)
 
 all: $(NAME)
+
+bonus: all $(BOBJS)
+	$(AR) $(NAME) $(BOBJS)
 
 clean:
 	$(RM) $(OBJS)
