@@ -6,7 +6,7 @@
 /*   By: jasahrao <jasahrao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 12:33:17 by jasahrao          #+#    #+#             */
-/*   Updated: 2022/10/12 00:15:22 by jasahrao         ###   ########.fr       */
+/*   Updated: 2022/10/12 12:14:42 by jasahrao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,12 +50,13 @@ static char	*ft_word(char const *s, char c, int *j)
 		(*j)++;
 	while (s[*j + len] && s[*j + len] != c)
 		len++;
-	word = malloc(len * sizeof(char));
+	word = malloc((len + 1) * sizeof(char));
 	if (!word)
 		return (NULL);
 	i = 0;
 	while (s[*j] && s[*j] != c)
 		word[i++] = s[(*j)++];
+	word[i] = '\0';
 	return (word);
 }
 
@@ -84,5 +85,3 @@ char	**ft_split(char const *s, char c)
 	res[i] = 0;
 	return (res);
 }
-
-
