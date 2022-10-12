@@ -6,7 +6,7 @@
 /*   By: jasahrao <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 13:24:51 by jasahrao          #+#    #+#             */
-/*   Updated: 2022/10/12 11:08:30 by jasahrao         ###   ########.fr       */
+/*   Updated: 2022/10/12 11:16:29 by jasahrao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,5 +67,5 @@ t_list				*ft_lstnew(void *content);
 void				ft_lstadd_front(t_list **lst, t_list *new);
 int					ft_lstsize(t_list *lst);
 t_list				*ft_lstlast(t_list *lst);
-
+void				ft_lstadd_back(t_list **lst, t_list *new);
 #endif
