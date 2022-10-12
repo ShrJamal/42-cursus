@@ -6,7 +6,7 @@
 /*   By: jasahrao <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 13:24:51 by jasahrao          #+#    #+#             */
-/*   Updated: 2022/10/12 10:56:24 by jasahrao         ###   ########.fr       */
+/*   Updated: 2022/10/12 11:04:45 by jasahrao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,5 +65,6 @@ typedef struct s_list
 }					t_list;
 t_list				*ft_lstnew(void *content);
 void				ft_lstadd_front(t_list **lst, t_list *new);
+int					ft_lstsize(t_list *lst);
 
 #endif
