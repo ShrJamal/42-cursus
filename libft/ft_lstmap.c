@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jasahrao <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jasahrao <jasahrao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 11:44:09 by jasahrao          #+#    #+#             */
-/*   Updated: 2022/10/12 12:06:32 by jasahrao         ###   ########.fr       */
+/*   Updated: 2022/10/12 12:14:14 by jasahrao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list *res;
-	int len;
-	int i;
+	t_list	*res;
+	int		len;
+	int		i;
 
 	if (!lst || !f)
 		return (NULL);
