@@ -6,7 +6,7 @@
 #    By: jasahrao <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/08 20:08:37 by jasahrao          #+#    #+#              #
-#    Updated: 2022/10/12 10:39:37 by jasahrao         ###   ########.fr        #
+#    Updated: 2022/10/12 10:41:21 by jasahrao         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,6 +37,12 @@ all: $(NAME)
 
 bonus: all $(BOBJS)
 	$(AR) $(NAME) $(BOBJS)
+
+test: all
+	$(CC) test.c -o test -L. $(NAME)
+
+bonus_test: bonus
+	$(CC) test.c -o test -L. $(NAME)
 
 clean:
 	$(RM) $(OBJS)
