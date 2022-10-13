@@ -6,7 +6,7 @@
 /*   By: jasahrao <jasahrao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 11:02:02 by jasahrao          #+#    #+#             */
-/*   Updated: 2022/10/11 10:53:49 by jasahrao         ###   ########.fr       */
+/*   Updated: 2022/10/13 08:51:19 by jasahrao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,5 @@
 void	ft_bzero(void *s, size_t n)
 {
 	while (n--)
-		*((char *)(s + n)) = 0;
+		*((unsigned char *)(s + n)) = 0;
 }
