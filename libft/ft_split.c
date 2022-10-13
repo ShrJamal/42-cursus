@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jasahrao <jasahrao@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jasahrao <jasahrao@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 12:33:17 by jasahrao          #+#    #+#             */
-/*   Updated: 2022/10/12 12:14:42 by jasahrao         ###   ########.fr       */
+/*   Updated: 2022/10/13 09:43:35 by jasahrao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,14 @@
 
 static char	**ft_malloc_err(char **arr)
 {
-	while (*arr)
+	int	i;
+
+	i = 0;
+	while (arr[i])
 	{
-		free(*arr);
-		arr++;
+		free(arr[i]);
+		arr[i] = NULL;
+		i++;
 	}
 	free(arr);
 	return (NULL);
@@ -43,20 +47,15 @@ static int	ft_words_count(char const *s, char c)
 static char	*ft_word(char const *s, char c, int *j)
 {
 	char	*word;
-	int		i;
 	int		len;
 
 	while (s[*j] && s[*j] == c)
 		(*j)++;
+	len = 0;
 	while (s[*j + len] && s[*j + len] != c)
 		len++;
-	word = malloc((len + 1) * sizeof(char));
-	if (!word)
-		return (NULL);
-	i = 0;
-	while (s[*j] && s[*j] != c)
-		word[i++] = s[(*j)++];
-	word[i] = '\0';
+	word = ft_substr(s, *j, len);
+	(*j) += len;
 	return (word);
 }
 
