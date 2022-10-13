@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jasahrao <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jasahrao <jasahrao@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 11:24:44 by jasahrao          #+#    #+#             */
 /*   Updated: 2022/10/12 11:35:58 by jasahrao         ###   ########.fr       */

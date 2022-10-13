@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: jasahrao <jasahrao@student.42.fr>          +#+  +:+       +#+         #
+#    By: jasahrao <jasahrao@student.42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/08 20:08:37 by jasahrao          #+#    #+#              #
-#    Updated: 2022/10/13 11:37:43 by jasahrao         ###   ########.fr        #
+#    Updated: 2022/10/13 10:22:56 by jasahrao         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -53,4 +53,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re bonus

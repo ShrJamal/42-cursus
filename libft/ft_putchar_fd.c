@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jasahrao <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jasahrao <jasahrao@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 09:49:16 by jasahrao          #+#    #+#             */
 /*   Updated: 2022/10/11 09:50:28 by jasahrao         ###   ########.fr       */
