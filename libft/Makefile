@@ -18,35 +18,37 @@ SRCS	=	ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_strlen.c \
 			ft_bzero.c ft_calloc.c ft_substr.c ft_strjoin.c ft_strtrim.c \
 			ft_split.c ft_itoa.c ft_strmapi.c ft_striteri.c ft_putchar_fd.c \
 			ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
-OBJS	=	$(SRCS:.c=.o)
 BSRCS	=	ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c \
 			ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c
-BOBJS	=	$(BSRCS:.c=.o)
+OBJ_DIR	=	objs/
+OBJS	=	$(addprefix $(OBJ_DIR), $(SRCS:.c=.o))
+BOBJS	=	$(OBJS) $(addprefix $(OBJ_DIR), $(BSRCS:.c=.o))
 INCS	=	libft.h
 CC		=	cc
-FLAGS	=	-Wall -Werror -Wextra 
+FLAGS	=	-Wall -Werror -Wextra -fsanitize=address -fsanitize=undefined
 AR		=	ar crs
 RM		=	rm -rf
 
-%.o: %.c $(INCS)
-	$(CC) $(CFLAGS) -c $< -o $(<:.c=.o)  -I $(INCS)
+$(OBJ_DIR)%.o: %.c $(INCS)
+	@mkdir -p $(OBJ_DIR)
+	$(CC) $(FLAGS) -c $< -o $@
 
 $(NAME): $(OBJS)
-	$(AR) $(NAME) $(OBJS)
+	$(AR) $@ $^
 
 all: $(NAME)
 
-bonus: all $(BOBJS)
-	$(AR) $(NAME) $(BOBJS)
+bonus: $(BOBJS)
+	$(AR) $(NAME) $^
 
 test: all
 	$(CC) test.c -o a.out -L. $(NAME)
 
 bonus_test: bonus
 	$(CC) test.c -o a.out -L. $(NAME)
-
+	
 clean:
-	$(RM) $(OBJS)
+	$(RM) $(OBJ_DIR)
 
 fclean: clean
 	$(RM) $(NAME)
