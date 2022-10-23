@@ -6,7 +6,7 @@
 /*   By: jasahrao <jasahrao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 19:27:14 by jasahrao          #+#    #+#             */
-/*   Updated: 2022/10/11 10:57:08 by jasahrao         ###   ########.fr       */
+/*   Updated: 2022/10/23 09:01:18 by jasahrao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 	if (!s1)
 		return (NULL);
+	if (!set)
+		return ft_strdup(s1);
 	start = 0;
 	while (s1[start] && ft_inset(s1[start], set))
 		start++;
