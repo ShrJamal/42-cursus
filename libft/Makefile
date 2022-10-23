@@ -23,15 +23,14 @@ BSRCS	=	ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c
 OBJ_DIR	=	objs/
 OBJS	=	$(addprefix $(OBJ_DIR), $(SRCS:.c=.o))
 BOBJS	=	$(OBJS) $(addprefix $(OBJ_DIR), $(BSRCS:.c=.o))
-INCS	=	libft.h
 CC		=	cc
-FLAGS	=	-Wall -Werror -Wextra -fsanitize=address -fsanitize=undefined
+CFLAGS	=	-Wall -Werror -Wextra
 AR		=	ar crs
 RM		=	rm -rf
 
-$(OBJ_DIR)%.o: %.c $(INCS)
+$(OBJ_DIR)%.o: %.c libft.h
 	@mkdir -p $(OBJ_DIR)
-	$(CC) $(FLAGS) -c $< -o $@
+	$(CC) $(CFLAGS) -c $< -o $@
 
 $(NAME): $(OBJS)
 	$(AR) $@ $^
@@ -41,12 +40,6 @@ all: $(NAME)
 bonus: $(BOBJS)
 	$(AR) $(NAME) $^
 
-test: all
-	$(CC) test.c -o a.out -L. $(NAME)
-
-bonus_test: bonus
-	$(CC) test.c -o a.out -L. $(NAME)
-	
 clean:
 	$(RM) $(OBJ_DIR)
 
@@ -56,3 +49,7 @@ fclean: clean
 re: fclean all
 
 .PHONY: all clean fclean re bonus
+
+test:
+	@$(CC) -fsanitize=address -fsanitize=undefined test.c -o a.out -L. $(NAME)
+	@./a.out
