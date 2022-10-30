@@ -6,7 +6,7 @@
 /*   By: jasahrao <jasahrao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 11:17:12 by jasahrao          #+#    #+#             */
-/*   Updated: 2022/10/30 11:38:33 by jasahrao         ###   ########.fr       */
+/*   Updated: 2022/10/30 21:04:30 by jasahrao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include <unistd.h>
 
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 4000
+#  define BUFFER_SIZE 0
 # endif
 
 # ifndef FD_SIZE
