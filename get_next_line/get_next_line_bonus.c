@@ -6,7 +6,7 @@
 /*   By: jasahrao <jasahrao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/30 10:50:22 by jasahrao          #+#    #+#             */
-/*   Updated: 2022/10/30 20:50:28 by jasahrao         ###   ########.fr       */
+/*   Updated: 2022/10/30 21:53:39 by jasahrao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,12 +32,12 @@ char	*get_next_line_bonus(int fd)
 		if (rd == -1)
 			return (free(buff), NULL);
 		buff[rd] = '\0';
-		tmp[fd] = ft_strjoin(tmp, buff);
+		tmp[fd] = ft_strjoin(tmp[fd], buff);
 	}
 	free(buff);
-	buff = tmp;
-	len = ft_strchr(tmp, '\n') - tmp + 1;
-	line = ft_substr(tmp, 0, len);
-	tmp[fd] = ft_substr(tmp, len, ft_strlen(tmp) - len + 1);
+	buff = tmp[fd];
+	len = ft_strchr(tmp[fd], '\n') - tmp[fd] + 1;
+	line = ft_substr(tmp[fd], 0, len);
+	tmp[fd] = ft_substr(tmp[fd], len, ft_strlen(tmp[fd]) - len + 1);
 	return (free(buff), line);
 }
