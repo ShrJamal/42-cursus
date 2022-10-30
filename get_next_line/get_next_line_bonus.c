@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   get_next_line_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jasahrao <jasahrao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,11 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
-char	*get_next_line(int fd)
+char	*get_next_line_bonus(int fd)
 {
-	static char	*tmp;
+	static char	*tmp[FD_SIZE];
 	char		*line;
 	char		*buff;
 	int			rd;
@@ -26,16 +26,16 @@ char	*get_next_line(int fd)
 	if (!buff)
 		return (NULL);
 	rd = 1;
-	while (rd != 0 && !ft_strchr(tmp, '\n'))
+	while (rd != 0 && !ft_strchr(tmp[fd], '\n'))
 	{
 		rd = read(fd, buff, BUFFER_SIZE);
 		if (rd == -1)
 			return (free(buff), NULL);
 		buff[rd] = '\0';
-		tmp = ft_strjoin(tmp, buff);
+		tmp[fd] = ft_strjoin(tmp, buff);
 	}
 	len = ft_strchr(tmp, '\n') - tmp + 1;
 	line = ft_substr(tmp, 0, len);
-	tmp = ft_substr(tmp, len, ft_strlen(tmp) - len + 1);
+	tmp[fd] = ft_substr(tmp, len, ft_strlen(tmp) - len + 1);
 	return (free(buff), line);
 }
