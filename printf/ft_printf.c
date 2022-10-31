@@ -6,7 +6,7 @@
 /*   By: jasahrao <jasahrao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 10:30:49 by jasahrao          #+#    #+#             */
-/*   Updated: 2022/10/31 11:59:56 by jasahrao         ###   ########.fr       */
+/*   Updated: 2022/10/31 12:11:17 by jasahrao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ static int	ft_format(va_list args, const char format)
 		len += ft_putchar(va_arg(args, int));
 	else if (format == 's')
 		len += ft_putstr(va_arg(args, char *));
+	else if (format == 'p')
+		len += ft_puthex(va_arg(args, size_t));
 	return (len);
 }
 
