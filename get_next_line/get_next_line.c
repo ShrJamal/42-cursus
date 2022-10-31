@@ -6,7 +6,7 @@
 /*   By: jasahrao <jasahrao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/30 10:50:22 by jasahrao          #+#    #+#             */
-/*   Updated: 2022/10/30 23:08:13 by jasahrao         ###   ########.fr       */
+/*   Updated: 2022/10/31 19:32:47 by jasahrao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,5 +54,7 @@ char	*get_next_line(int fd)
 	line = ft_substr(tmp, 0, len);
 	t = tmp;
 	tmp = ft_substr(tmp, len, ft_strlen(tmp) - len);
-	return (free(t), line);
+	if (t)
+		free(t);
+	return (line);
 }
