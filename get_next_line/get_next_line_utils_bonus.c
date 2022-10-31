@@ -6,7 +6,7 @@
 /*   By: jasahrao <jasahrao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 11:17:36 by jasahrao          #+#    #+#             */
-/*   Updated: 2022/10/30 22:03:23 by jasahrao         ###   ########.fr       */
+/*   Updated: 2022/10/31 09:43:06 by jasahrao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,16 +73,9 @@ char	*ft_substr(char *s, unsigned int start, size_t len)
 	size_t	slen;
 	size_t	i;
 
-	if (!s)
-		return (NULL);
 	slen = ft_strlen(s);
 	if (slen <= start)
-	{
-		sub = malloc(sizeof(char));
-		if (sub)
-			sub[0] = '\0';
-		return (sub);
-	}
+		return (NULL);
 	else if (slen <= start + len)
 		slen -= start;
 	else

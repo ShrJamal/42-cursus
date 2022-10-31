@@ -6,7 +6,7 @@
 /*   By: jasahrao <jasahrao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 11:17:12 by jasahrao          #+#    #+#             */
-/*   Updated: 2022/10/30 21:04:30 by jasahrao         ###   ########.fr       */
+/*   Updated: 2022/10/30 22:37:03 by jasahrao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@
 char	*get_next_line_bonus(int fd);
 size_t	ft_strlen(char *s);
 char	*ft_strjoin(char *s1, char *s2);
-char	*ft_strchr(const char *s, int c);
+char	*ft_strchr(char *s, int c);
 char	*ft_substr(char *s, unsigned int start, size_t len);
 
 #endif
