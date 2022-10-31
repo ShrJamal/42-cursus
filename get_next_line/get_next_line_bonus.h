@@ -6,7 +6,7 @@
 /*   By: jasahrao <jasahrao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 11:17:12 by jasahrao          #+#    #+#             */
-/*   Updated: 2022/10/30 22:37:03 by jasahrao         ###   ########.fr       */
+/*   Updated: 2022/10/31 10:04:22 by jasahrao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,10 @@
 # endif
 
 # ifndef FD_SIZE
-#  define FD_SIZE 65535
+#  define FD_SIZE 10240
 # endif
 
-char	*get_next_line_bonus(int fd);
+char	*get_next_line(int fd);
 size_t	ft_strlen(char *s);
 char	*ft_strjoin(char *s1, char *s2);
 char	*ft_strchr(char *s, int c);

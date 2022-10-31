@@ -6,7 +6,7 @@
 /*   By: jasahrao <jasahrao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/30 10:50:22 by jasahrao          #+#    #+#             */
-/*   Updated: 2022/10/31 09:39:21 by jasahrao         ###   ########.fr       */
+/*   Updated: 2022/10/31 10:14:57 by jasahrao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ static char	*ft_read_line(int fd, char *tmp)
 	return (free(buff), tmp);
 }
 
-char	*get_next_line_bonus(int fd)
+char	*get_next_line(int fd)
 {
 	static char	*tmp[FD_SIZE];
 	char		*t;
