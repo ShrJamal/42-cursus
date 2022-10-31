@@ -6,12 +6,12 @@
 #    By: jasahrao <jasahrao@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/31 10:34:50 by jasahrao          #+#    #+#              #
-#    Updated: 2022/10/31 12:31:55 by jasahrao         ###   ########.fr        #
+#    Updated: 2022/10/31 19:51:49 by jasahrao         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	=	libftprintf.a
-SRCS	=	ft_printf.c ft_putstr.c ft_putnbr.c ft_puthex.c
+SRCS	=	ft_printf.c ft_putstr.c ft_putnbr.c ft_putptr.c ft_puthex.c
 OBJ_DIR	=	objs/
 OBJS	=	$(addprefix $(OBJ_DIR), $(SRCS:%.c=%.o))
 INCS	=	ft_printf.h
