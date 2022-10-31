@@ -1,53 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf_utils.c                                  :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jasahrao <jasahrao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 10:30:49 by jasahrao          #+#    #+#             */
-/*   Updated: 2022/10/31 12:11:17 by jasahrao         ###   ########.fr       */
+/*   Updated: 2022/10/31 12:35:49 by jasahrao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_putchar(int c)
+static int	ft_print_nbr(long long nbr)
 {
-	write(1, &c, 1);
-	return (1);
+	if (nbr < 10)
+		return ft_putchar(nbr + '0');
+	return ft_print_nbr(nbr / 10) + ft_putchar(nbr % 10 + '0');
 }
 
-int	ft_putstr(char *s)
+int	ft_putnbr(long long nbr)
 {
 	int	len;
-
-	if (!s)
-		return (0);
-	len = -1;
-	while (s[++len])
-		ft_putchar(s[len]);
-	return (len);
-}
-
-int	ft_puthex(size_t ptr)
-{
-	static int len;
-
-	if (len == 0)
+	
+	len = 0;
+	if (nbr < 0)
 	{
-		len += write(1, "0x", 2);
-		if (ptr == 0)
-			return (len += write(1, "0", 1), len);
+		len += ft_putchar('-');
+		nbr *= -1;
 	}
-	if (ptr >= 16)
-	{
-		ft_puthex(ptr / 16);
-		ft_puthex(ptr % 16);
-	}
-	else if (ptr <= 9)
-		len += ft_putchar((ptr + '0'));
-	else
-		len += ft_putchar((ptr - 10 + 'a'));
+	len += ft_print_nbr(nbr);
 	return (len);
 }
