@@ -7,6 +7,7 @@ main
 tempCodeRunnerFile*
 *.o
 *.a
+*.out
 *gch
 cmake-build*
 libft.a
