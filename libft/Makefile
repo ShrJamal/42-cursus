@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: jasahrao <jasahrao@student.42.fr>                    +#+  +:+       +#+         #
+#    By: jasahrao <jasahrao@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/10/08 20:08:37 by jasahrao          #+#    #+#              #
-#    Updated: 2022/10/13 10:22:56 by jasahrao         ###   ########.fr        #
+#    Created: 2022/10/31 10:35:02 by jasahrao          #+#    #+#              #
+#    Updated: 2022/10/31 10:35:38 by jasahrao         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,12 +23,13 @@ BSRCS	=	ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c
 OBJ_DIR	=	objs/
 OBJS	=	$(addprefix $(OBJ_DIR), $(SRCS:.c=.o))
 BOBJS	=	$(OBJS) $(addprefix $(OBJ_DIR), $(BSRCS:.c=.o))
+INCS	=	libft.h
 CC		=	cc
 CFLAGS	=	-Wall -Werror -Wextra
 AR		=	ar crs
 RM		=	rm -rf
 
-$(OBJ_DIR)%.o: %.c libft.h
+$(OBJ_DIR)%.o: %.c $(INCS)
 	@mkdir -p $(OBJ_DIR)
 	$(CC) $(CFLAGS) -c $< -o $@
 
