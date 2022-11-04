@@ -6,22 +6,19 @@
 /*   By: jasahrao <jasahrao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 11:17:12 by jasahrao          #+#    #+#             */
-/*   Updated: 2022/10/31 10:04:22 by jasahrao         ###   ########.fr       */
+/*   Updated: 2022/11/04 11:10:58 by jasahrao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef GET_NEXT_LINE_BONUS_H
 # define GET_NEXT_LINE_BONUS_H
 
+# include <limits.h>
 # include <stdlib.h>
 # include <unistd.h>
 
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 0
-# endif
-
-# ifndef FD_SIZE
-#  define FD_SIZE 10240
 # endif
 
 char	*get_next_line(int fd);
