@@ -6,7 +6,7 @@
 /*   By: jasahrao <jasahrao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 10:30:49 by jasahrao          #+#    #+#             */
-/*   Updated: 2022/11/04 11:13:21 by jasahrao         ###   ########.fr       */
+/*   Updated: 2022/11/04 12:51:01 by jasahrao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 static int	ft_format(va_list *args, const char format)
 {
-	if (format == 'c')
-		return (ft_putchar(va_arg(*args, int)));
-	else if (format == 's')
+	if (format == '\0')
+		return (0);
+	if (format == 's')
 		return (ft_putstr(va_arg(*args, char *)));
 	else if (format == 'p')
 		return (ft_putptr(va_arg(*args, size_t)));
@@ -26,9 +26,8 @@ static int	ft_format(va_list *args, const char format)
 		return (ft_putnbr(va_arg(*args, unsigned int)));
 	else if (format == 'x' || format == 'X')
 		return (ft_puthex(va_arg(*args, unsigned int), format));
-	else if (format == '%')
-		return (ft_putchar('%'));
-	return (0);
+	else
+		return (ft_putchar(va_arg(*args, int)));
 }
 
 int	ft_printf(const char *str, ...)

@@ -6,7 +6,7 @@
 /*   By: jasahrao <jasahrao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 10:33:38 by jasahrao          #+#    #+#             */
-/*   Updated: 2022/10/31 22:33:56 by jasahrao         ###   ########.fr       */
+/*   Updated: 2022/11/04 12:50:00 by jasahrao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 #include <limits.h>
 #include <stdio.h>
 
-#define TEST "%x-%X\n", LONG_MAX + 1, LONG_MAX + 1
+// #define TEST "%x-%X\n", LONG_MAX + 1, LONG_MAX + 1
+#define TEST "aa%"
 
 int	main(void)
 {
@@ -26,6 +27,6 @@ int	main(void)
 	p1 = 12;
 	p2 = -12;
 	len1 = ft_printf(TEST);
-	len2 = printf(TEST);
-	printf("len1:%d == len2:%d", len1, len2);
+	// len2 = printf(TEST);
+	printf("\nlen1:%d == len2:%d", len1, len2);
 }
