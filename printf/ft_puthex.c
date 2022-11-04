@@ -6,7 +6,7 @@
 /*   By: jasahrao <jasahrao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 12:22:59 by jasahrao          #+#    #+#             */
-/*   Updated: 2022/10/31 22:33:17 by jasahrao         ###   ########.fr       */
+/*   Updated: 2022/11/04 11:14:00 by jasahrao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,7 @@ static int	ft_printhex(unsigned int hex, char format)
 
 int	ft_puthex(unsigned int hex, char format)
 {
-	int	len;
-
-	len = 0;
 	if (hex == 0)
-		return (write(1, "0", 1) + len);
-	return (ft_printhex(hex, format) + len);
+		return (write(1, "0", 1));
+	return (ft_printhex(hex, format));
 }

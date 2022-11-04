@@ -6,7 +6,7 @@
 /*   By: jasahrao <jasahrao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 10:30:49 by jasahrao          #+#    #+#             */
-/*   Updated: 2022/10/31 22:33:23 by jasahrao         ###   ########.fr       */
+/*   Updated: 2022/11/04 11:13:21 by jasahrao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,24 +14,21 @@
 
 static int	ft_format(va_list *args, const char format)
 {
-	int	len;
-
-	len = 0;
 	if (format == 'c')
-		len += ft_putchar(va_arg(*args, int));
+		return (ft_putchar(va_arg(*args, int)));
 	else if (format == 's')
-		len += ft_putstr(va_arg(*args, char *));
+		return (ft_putstr(va_arg(*args, char *)));
 	else if (format == 'p')
-		len += ft_putptr(va_arg(*args, size_t));
+		return (ft_putptr(va_arg(*args, size_t)));
 	else if (format == 'd' || format == 'i')
-		len += ft_putnbr(va_arg(*args, int));
+		return (ft_putnbr(va_arg(*args, int)));
 	else if (format == 'u')
-		len += ft_putnbr(va_arg(*args, unsigned int));
+		return (ft_putnbr(va_arg(*args, unsigned int)));
 	else if (format == 'x' || format == 'X')
-		len += ft_puthex(va_arg(*args, unsigned int), format);
+		return (ft_puthex(va_arg(*args, unsigned int), format));
 	else if (format == '%')
-		len += ft_putchar('%');
-	return (len);
+		return (ft_putchar('%'));
+	return (0);
 }
 
 int	ft_printf(const char *str, ...)
