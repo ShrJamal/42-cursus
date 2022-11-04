@@ -6,7 +6,7 @@
 /*   By: jasahrao <jasahrao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/30 10:50:22 by jasahrao          #+#    #+#             */
-/*   Updated: 2022/10/31 10:14:57 by jasahrao         ###   ########.fr       */
+/*   Updated: 2022/11/04 11:10:58 by jasahrao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,21 +19,13 @@ static char	*ft_read_line(int fd, char *tmp)
 
 	buff = malloc(sizeof(char) * (BUFFER_SIZE + 1));
 	if (!buff)
-	{
-		if (tmp != NULL)
-			free(tmp);
-		return (NULL);
-	}
+		return (free(tmp), NULL);
 	rd = 1;
 	while (rd != 0 && !ft_strchr(tmp, '\n'))
 	{
 		rd = read(fd, buff, BUFFER_SIZE);
 		if (rd == -1)
-		{
-			if (tmp != NULL)
-				free(tmp);
-			return (free(buff), NULL);
-		}
+			return (free(tmp), free(buff), NULL);
 		buff[rd] = '\0';
 		tmp = ft_strjoin(tmp, buff);
 	}
@@ -42,7 +34,7 @@ static char	*ft_read_line(int fd, char *tmp)
 
 char	*get_next_line(int fd)
 {
-	static char	*tmp[FD_SIZE];
+	static char	*tmp[OPEN_MAX];
 	char		*t;
 	char		*line;
 	int			len;
