@@ -6,7 +6,7 @@
 #    By: jasahrao <jasahrao@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/31 10:34:50 by jasahrao          #+#    #+#              #
-#    Updated: 2022/10/31 19:51:49 by jasahrao         ###   ########.fr        #
+#    Updated: 2022/11/06 10:42:12 by jasahrao         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ OBJ_DIR	=	objs/
 OBJS	=	$(addprefix $(OBJ_DIR), $(SRCS:%.c=%.o))
 INCS	=	ft_printf.h
 CC		=	cc
-CFLAGS	=	#-Wall -Werror -Wextra
+CFLAGS	=	-Wall -Werror -Wextra
 AR		=	ar crs
 RM		=	rm -rf
 

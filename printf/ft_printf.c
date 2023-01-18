@@ -6,7 +6,7 @@
 /*   By: jasahrao <jasahrao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 10:30:49 by jasahrao          #+#    #+#             */
-/*   Updated: 2022/11/04 12:51:01 by jasahrao         ###   ########.fr       */
+/*   Updated: 2022/11/06 10:11:29 by jasahrao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ static int	ft_format(va_list *args, const char format)
 {
 	if (format == '\0')
 		return (0);
+	if (format == 'c')
+		return (ft_putchar(va_arg(*args, int)));
 	if (format == 's')
 		return (ft_putstr(va_arg(*args, char *)));
 	else if (format == 'p')
@@ -27,7 +29,7 @@ static int	ft_format(va_list *args, const char format)
 	else if (format == 'x' || format == 'X')
 		return (ft_puthex(va_arg(*args, unsigned int), format));
 	else
-		return (ft_putchar(va_arg(*args, int)));
+		return (ft_putchar(format));
 }
 
 int	ft_printf(const char *str, ...)
