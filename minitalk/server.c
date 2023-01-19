@@ -6,7 +6,7 @@
 /*   By: jasahrao <jasahrao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/26 10:56:15 by jasahrao          #+#    #+#             */
-/*   Updated: 2023/01/14 12:48:44 by jasahrao         ###   ########.fr       */
+/*   Updated: 2023/01/19 11:51:16 by jasahrao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ void	handler_sigusr(int sig, siginfo_t *info, void *context)
 
 int	main(void)
 {
-	struct sigaction sa;
+	struct sigaction	sa;
 
 	sa.sa_sigaction = handler_sigusr;
 	sigaction(SIGUSR1, &sa, NULL);
