@@ -6,7 +6,7 @@
 /*   By: jasahrao <jasahrao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/26 10:56:15 by jasahrao          #+#    #+#             */
-/*   Updated: 2023/01/19 11:51:58 by jasahrao         ###   ########.fr       */
+/*   Updated: 2023/01/19 12:04:27 by jasahrao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,8 @@ void	handler_sigusr(int sig, siginfo_t *info, void *context)
 	if (i < 0)
 	{
 		ft_putchar_fd(c, 1);
+		if (c == '\0')
+			kill(pid, SIGUSR1);
 		pid = 0;
 	}
 }

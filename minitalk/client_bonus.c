@@ -6,7 +6,7 @@
 /*   By: jasahrao <jasahrao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/29 19:05:39 by jasahrao          #+#    #+#             */
-/*   Updated: 2023/01/14 18:35:39 by jasahrao         ###   ########.fr       */
+/*   Updated: 2023/01/19 12:17:05 by jasahrao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,13 @@ void	ft_send_byte(int pid, char byte)
 	}
 }
 
+void	handle_res(int sig)
+{
+	(void)sig;
+	ft_putstr_fd("Message sent.\n", 1);
+	exit(0);
+}
+
 int	main(int ac, char **av)
 {
 	int	i;
@@ -44,9 +51,12 @@ int	main(int ac, char **av)
 	pid = ft_atoi(av[1]);
 	if (pid < 0)
 		return (ft_putstr_fd("client: invalid PID.\n", 2), 1);
+	signal(SIGUSR1, handle_res);
 	i = -1;
 	while (av[2][++i])
 		ft_send_byte(pid, av[2][i]);
 	ft_send_byte(pid, '\0');
+	while (1)
+		pause();
 	return (0);
 }
