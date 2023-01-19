@@ -6,7 +6,7 @@
 #    By: jasahrao <jasahrao@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/14 11:58:37 by jasahrao          #+#    #+#              #
-#    Updated: 2023/01/14 18:26:54 by jasahrao         ###   ########.fr        #
+#    Updated: 2023/01/19 18:04:36 by jasahrao         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,6 +45,13 @@ $(OBJ_DIR)%.o: %.c $(INCS)
 	@mkdir -p $(OBJ_DIR)
 	$(CC) $(CFLAGS) -c $< -o $@
 
+
+all: $(SERVER) $(CLIENT)
+
+$(NAME): all
+
+bonus: $(SERVER_BONUS) $(CLIENT_BONUS)
+
 $(SERVER): $(OBJ_S)
 	@$(CC) $(CFLAGS) $^ -o $@
 	@printf "$(_SUCCESS) $@ ready.\n"
@@ -60,12 +67,6 @@ $(SERVER_BONUS): $(OBJ_S_B)
 $(CLIENT_BONUS): $(OBJ_C_B)
 	@$(CC) $(CFLAGS) $^ -o $@
 	@printf "$(_SUCCESS) $@ ready.\n"
-
-$(NAME): all
-
-all: $(SERVER) $(CLIENT)
-
-bonus: $(SERVER_BONUS) $(CLIENT_BONUS)
 
 clean:
 	@ $(RM) $(OBJ_DIR)
