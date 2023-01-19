@@ -6,7 +6,7 @@
 /*   By: jasahrao <jasahrao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/29 18:26:54 by jasahrao          #+#    #+#             */
-/*   Updated: 2023/01/14 13:00:00 by jasahrao         ###   ########.fr       */
+/*   Updated: 2023/01/19 12:45:14 by jasahrao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define MINITALK_H
 
 # include <signal.h>
+# include <stdlib.h>
 # include <unistd.h>
 
 void	ft_putchar_fd(char c, int fd);
