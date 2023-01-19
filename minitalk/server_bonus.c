@@ -6,7 +6,7 @@
 /*   By: jasahrao <jasahrao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/26 10:56:15 by jasahrao          #+#    #+#             */
-/*   Updated: 2023/01/19 12:04:27 by jasahrao         ###   ########.fr       */
+/*   Updated: 2023/01/19 13:02:57 by jasahrao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,7 @@ int	main(void)
 	struct sigaction	sa;
 
 	sa.sa_sigaction = handler_sigusr;
+	sa.sa_flags = SA_SIGINFO;
 	sigaction(SIGUSR1, &sa, NULL);
 	sigaction(SIGUSR2, &sa, NULL);
 	ft_putstr_fd("PID: ", 1);
