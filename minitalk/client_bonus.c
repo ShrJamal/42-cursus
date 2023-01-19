@@ -6,7 +6,7 @@
 /*   By: jasahrao <jasahrao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/29 19:05:39 by jasahrao          #+#    #+#             */
-/*   Updated: 2023/01/19 12:17:05 by jasahrao         ###   ########.fr       */
+/*   Updated: 2023/01/19 12:44:54 by jasahrao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	ft_send_byte(int pid, char byte)
 		else
 			err = kill(pid, SIGUSR2);
 		if (err == -1)
-			(ft_putstr_fd("Error signal\n", 2), exit(1));
+			(ft_putstr_fd("Signal Error\n", 2), exit(1));
 		usleep(500);
 	}
 }
