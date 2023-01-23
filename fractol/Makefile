@@ -6,7 +6,7 @@
 #    By: jasahrao <jasahrao@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/14 11:58:37 by jasahrao          #+#    #+#              #
-#    Updated: 2023/01/23 09:36:22 by jasahrao         ###   ########.fr        #
+#    Updated: 2023/01/23 09:51:14 by jasahrao         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,6 +42,7 @@ $(OBJ_DIR)%.o: $(SRC_DIR)%.c $(INCS)
 	$(CC) $(CFLAGS) $(MLX_INC) -I $(INCS) -c $< -o $@ 
 
 $(NAME): $(OBJ)
+	@ cd $(MLX) && make
 	$(CC) $(OBJ) $(MLX_LNK) -lm -o $(NAME)
 	@printf "$(_SUCCESS) $@ ready.\n"
 
