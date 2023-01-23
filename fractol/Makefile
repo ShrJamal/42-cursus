@@ -6,7 +6,7 @@
 #    By: jasahrao <jasahrao@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/14 11:58:37 by jasahrao          #+#    #+#              #
-#    Updated: 2023/01/23 09:03:13 by jasahrao         ###   ########.fr        #
+#    Updated: 2023/01/23 09:36:22 by jasahrao         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,6 +19,11 @@ SRC_DIR	=	src/
 SRC 	=	main.c
 OBJ_DIR	=	objs/
 OBJ 	=	$(addprefix $(OBJ_DIR), $(SRC:.c=.o))
+# mlx library
+MLX		= ./mlx/
+MLX_LNK	= -L $(MLX) -l mlx -framework OpenGL -framework AppKit
+MLX_INC	= -I $(MLX)
+MLX_LIB	= $(addprefix $(MLX), mlx.a)
 
 # Compiling Variables #
 CC			=	gcc
@@ -34,10 +39,10 @@ _INFO		=	[$(YELLOW)INFO$(RESET)]
 
 $(OBJ_DIR)%.o: $(SRC_DIR)%.c $(INCS)
 	@mkdir -p $(OBJ_DIR)
-	$(CC) $(CFLAGS) -c $< -o $@
+	$(CC) $(CFLAGS) $(MLX_INC) -I $(INCS) -c $< -o $@ 
 
 $(NAME): $(OBJ)
-	@$(CC) $(CFLAGS) $^ -o $@
+	$(CC) $(OBJ) $(MLX_LNK) -lm -o $(NAME)
 	@printf "$(_SUCCESS) $@ ready.\n"
 
 all: $(NAME)
