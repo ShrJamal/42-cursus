@@ -6,7 +6,7 @@
 /*   By: jasahrao <jasahrao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/03 22:14:45 by jasahrao          #+#    #+#             */
-/*   Updated: 2023/03/04 17:29:44 by jasahrao         ###   ########.fr       */
+/*   Updated: 2023/03/04 17:30:29 by jasahrao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,8 @@ void	render_fractal(t_vars *fr)
 			c.im = fr->move.im - y * fr->scale;
 			if (fr->type == 1)
 				iter = mandelbrot(fr, c);
+			else if (fr->type == 2)
+				iter = julia(fr, c);
 			ft_put_pixels(&fr->mlx.img, x, y, iter);
 			y++;
 		}
