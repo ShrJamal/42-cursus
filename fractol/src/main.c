@@ -18,6 +18,8 @@ static t_vars	init_fractal(int ac, char **av)
 		fr.type = 2;
 	else if (ac == 2 && ft_strcmp(av[1], BURNING_SHIP) == 0)
 		fr.type = 3;
+	else if (ac == 2 && ft_strcmp(av[1], CELTIC_MANDEBLROT) == 0)
+		fr.type = 4;
 	else
 		ft_usage_error();
 	if (ac == 4 && fr.type == 2)
