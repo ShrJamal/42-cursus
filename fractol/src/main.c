@@ -8,7 +8,7 @@ static void	ft_usage_error(void)
 	exit(1);
 }
 
-static t_vars	init_fractal(int ac, char **av)
+int	main(int ac, char **av)
 {
 	t_vars	fr;
 
@@ -27,14 +27,6 @@ static t_vars	init_fractal(int ac, char **av)
 	else
 		set_cplx(&fr.c_julia, -0.6, 0.6);
 	reset_vars(&fr);
-	return (fr);
-}
-
-int	main(int ac, char **av)
-{
-	t_vars	fr;
-
-	fr = init_fractal(ac, av);
 	fr.mlx = init_mlx();
 	set_hooks(&fr);
 	render_fractal(&fr);
