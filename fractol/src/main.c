@@ -14,6 +14,10 @@ static t_vars	init_fractal(int ac, char **av)
 
 	if (ac == 2 && ft_strcmp(av[1], MANDELBROT) == 0)
 		fr.type = 1;
+	else if ((ac == 2 || ac == 4) && ft_strcmp(av[1], JULIA) == 0)
+		fr.type = 2;
+	else if (ac == 2 && ft_strcmp(av[1], BURNING_SHIP) == 0)
+		fr.type = 3;
 	else
 		ft_usage_error();
 	if (ac == 4 && fr.type == 2)
