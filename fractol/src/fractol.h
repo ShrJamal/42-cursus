@@ -6,7 +6,7 @@
 /*   By: jasahrao <jasahrao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/03 21:55:13 by jasahrao          #+#    #+#             */
-/*   Updated: 2023/03/04 17:19:49 by jasahrao         ###   ########.fr       */
+/*   Updated: 2023/03/04 17:50:34 by jasahrao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,7 @@ void		reset_vars(t_vars *fr);
 void		set_hooks(t_vars *fr);
 int			key_hook(int key, t_vars *fr);
 int			mouse_hook(int key, int x, int y, t_vars *fr);
-int			exit_hook(t_mlx m);
+int			ft_exit(t_mlx m);
 
 double		ft_atod(char *s);
 int			ft_strcmp(char *s1, char *s2);

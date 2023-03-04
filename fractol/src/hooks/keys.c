@@ -6,7 +6,7 @@
 /*   By: jasahrao <jasahrao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/03 21:29:38 by jasahrao          #+#    #+#             */
-/*   Updated: 2023/03/04 12:44:49 by jasahrao         ###   ########.fr       */
+/*   Updated: 2023/03/04 17:50:34 by jasahrao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	key_hook(int key, t_vars *fr)
 
 	move = 0.05 * WIN_SIZE * fr->scale;
 	if (key == KEY_ESC)
-		exit_hook(fr->mlx);
+		ft_exit(fr->mlx);
 	if (key == KEY_R)
 		reset_vars(fr);
 	else if (key == ARROW_LEFT)

@@ -6,7 +6,7 @@
 #    By: jasahrao <jasahrao@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/14 11:58:37 by jasahrao          #+#    #+#              #
-#    Updated: 2023/03/04 16:59:46 by jasahrao         ###   ########.fr        #
+#    Updated: 2023/03/04 17:50:54 by jasahrao         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,6 @@ SRCS 	=	src/main.c\
 			src/fractals/celtic_mandelbrot.c\
 			src/hooks/keys.c\
 			src/hooks/mouse.c\
-			src/hooks/exit.c\
 			src/utils/complex.c\
 			src/utils/ft_atod.c\
 			src/utils/mlx.c\
