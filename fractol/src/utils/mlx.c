@@ -6,7 +6,7 @@
 /*   By: jasahrao <jasahrao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/03 22:03:15 by jasahrao          #+#    #+#             */
-/*   Updated: 2023/03/09 11:25:23 by jasahrao         ###   ########.fr       */
+/*   Updated: 2023/03/09 12:09:35 by jasahrao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ void	set_hooks(t_vars *fr)
 {
 	mlx_key_hook(fr->mlx.win, key_hook, fr);
 	mlx_mouse_hook(fr->mlx.win, mouse_hook, fr);
+	mlx_hook(fr->mlx.win, 6, 0, mouse_move_hook, fr);
 	mlx_hook(fr->mlx.win, 17, 0, ft_exit, fr);
 }
 
@@ -39,6 +40,7 @@ void	reset_vars(t_vars *fr)
 	fr->scale = 4 / (double)WIN_SIZE;
 	fr->max_iter = 50.0;
 	fr->shift = 0;
+	fr->mouse_lock = 1;
 }
 
 int	ft_exit(t_mlx m)

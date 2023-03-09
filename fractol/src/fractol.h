@@ -6,7 +6,7 @@
 /*   By: jasahrao <jasahrao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/03 21:55:13 by jasahrao          #+#    #+#             */
-/*   Updated: 2023/03/09 11:56:58 by jasahrao         ###   ########.fr       */
+/*   Updated: 2023/03/09 12:07:31 by jasahrao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,7 @@ typedef struct s_vars
 	double	scale;
 	double	max_iter;
 	int		shift;
+	int		mouse_lock;
 }			t_vars;
 
 // Fractals
@@ -79,6 +80,7 @@ void		render_fractal(t_vars *fr);
 void		set_hooks(t_vars *fr);
 int			key_hook(int key, t_vars *fr);
 int			mouse_hook(int key, int x, int y, t_vars *fr);
+int			mouse_move_hook(int x, int y, t_vars *fr);
 int			ft_exit(t_mlx m);
 // Utils
 t_mlx		init_mlx(void);
