@@ -6,7 +6,7 @@
 /*   By: jasahrao <jasahrao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/03 21:55:13 by jasahrao          #+#    #+#             */
-/*   Updated: 2023/03/09 09:56:43 by jasahrao         ###   ########.fr       */
+/*   Updated: 2023/03/09 10:03:38 by jasahrao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@
 # define JULIA "julia"
 # define BURNING_SHIP "burning_ship"
 # define CELTIC_MANDEBLROT "celtic"
-# define MAX_ITERS 50
 # define KEY_ESC 53
 # define KEY_R 15
 # define KEY_SHIFT 257
@@ -69,19 +68,20 @@ typedef struct s_vars
 	int		color;
 }			t_vars;
 
-t_mlx		init_mlx(void);
-void		render_fractal(t_vars *fr);
-int			mandelbrot(t_vars *fr, t_cplx c);
-int			julia(t_vars *fr, t_cplx c);
-int			burning_ship(t_vars *fr, t_cplx c);
-int			celtic_mandelbrot(t_vars *fr, t_cplx c);
-void		reset_vars(t_vars *fr);
-
+// Fractals
+double		mandelbrot(t_vars *fr, t_cplx c);
+double		julia(t_vars *fr, t_cplx c);
+double		burning_ship(t_vars *fr, t_cplx c);
+double		celtic_mandelbrot(t_vars *fr, t_cplx c);
+// Hooks
 void		set_hooks(t_vars *fr);
 int			key_hook(int key, t_vars *fr);
 int			mouse_hook(int key, int x, int y, t_vars *fr);
 int			ft_exit(t_mlx m);
-
+// Utils
+t_mlx		init_mlx(void);
+void		render_fractal(t_vars *fr);
+void		reset_vars(t_vars *fr);
 double		ft_atod(char *s);
 int			ft_strcmp(char *s1, char *s2);
 void		ft_putstr_fd(char *s, int fd);

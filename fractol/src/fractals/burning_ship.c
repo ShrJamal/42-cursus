@@ -6,13 +6,13 @@
 /*   By: jasahrao <jasahrao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/04 16:36:53 by jasahrao          #+#    #+#             */
-/*   Updated: 2023/03/04 16:55:34 by jasahrao         ###   ########.fr       */
+/*   Updated: 2023/03/09 10:02:26 by jasahrao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../fractol.h"
 
-int	burning_ship(t_vars *fr, t_cplx c)
+double	burning_ship(t_vars *fr, t_cplx c)
 {
 	t_cplx	z;
 	t_cplx	tmp;
@@ -30,5 +30,5 @@ int	burning_ship(t_vars *fr, t_cplx c)
 		set_cplx(&tmp, z.re * z.re, z.im * z.im);
 		it++;
 	}
-	return (it);
+	return ((double)it / fr->max_iter);
 }

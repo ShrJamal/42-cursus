@@ -6,13 +6,13 @@
 /*   By: jasahrao <jasahrao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/03 21:44:24 by jasahrao          #+#    #+#             */
-/*   Updated: 2023/03/04 16:47:01 by jasahrao         ###   ########.fr       */
+/*   Updated: 2023/03/09 10:02:26 by jasahrao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../fractol.h"
 
-int	julia(t_vars *fr, t_cplx c)
+double	julia(t_vars *fr, t_cplx c)
 {
 	int		it;
 	t_cplx	z;
@@ -27,5 +27,5 @@ int	julia(t_vars *fr, t_cplx c)
 			2 * z.re * z.im + fr->c_julia.im);
 		it++;
 	}
-	return (it);
+	return ((double)it / fr->max_iter);
 }
