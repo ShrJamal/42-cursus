@@ -6,7 +6,7 @@
 /*   By: jasahrao <jasahrao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/03 22:03:15 by jasahrao          #+#    #+#             */
-/*   Updated: 2023/03/04 17:51:01 by jasahrao         ###   ########.fr       */
+/*   Updated: 2023/03/09 09:55:49 by jasahrao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ void	reset_vars(t_vars *fr)
 	set_cplx(&fr->move, -2, 2);
 	fr->scale = 4 / (double)WIN_SIZE;
 	fr->max_iter = MAX_ITERS;
+	fr->color = 10;
 }
 
 int	ft_exit(t_mlx m)

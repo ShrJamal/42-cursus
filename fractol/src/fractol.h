@@ -6,7 +6,7 @@
 /*   By: jasahrao <jasahrao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/03 21:55:13 by jasahrao          #+#    #+#             */
-/*   Updated: 2023/03/04 17:50:34 by jasahrao         ###   ########.fr       */
+/*   Updated: 2023/03/09 09:56:43 by jasahrao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,10 @@
 # define JULIA "julia"
 # define BURNING_SHIP "burning_ship"
 # define CELTIC_MANDEBLROT "celtic"
-# define COLOR 10
 # define MAX_ITERS 50
 # define KEY_ESC 53
 # define KEY_R 15
+# define KEY_SHIFT 257
 # define ARROW_LEFT 123
 # define ARROW_RIGHT 124
 # define ARROW_UP 126
@@ -66,6 +66,7 @@ typedef struct s_vars
 	t_cplx	move;
 	double	scale;
 	int		max_iter;
+	int		color;
 }			t_vars;
 
 t_mlx		init_mlx(void);
