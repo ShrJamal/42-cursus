@@ -6,7 +6,7 @@
 /*   By: jasahrao <jasahrao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/03 21:55:13 by jasahrao          #+#    #+#             */
-/*   Updated: 2023/03/09 10:03:38 by jasahrao         ###   ########.fr       */
+/*   Updated: 2023/03/09 11:56:58 by jasahrao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,8 @@
 # include <stdlib.h>
 # include <unistd.h>
 
-# define WIN_SIZE 400.0
+# define WIN_SIZE 1000.0
+# define COLOR 100
 # define MANDELBROT "mandelbrot"
 # define JULIA "julia"
 # define BURNING_SHIP "burning_ship"
@@ -64,8 +65,8 @@ typedef struct s_vars
 	t_cplx	c_julia;
 	t_cplx	move;
 	double	scale;
-	int		max_iter;
-	int		color;
+	double	max_iter;
+	int		shift;
 }			t_vars;
 
 // Fractals
@@ -73,6 +74,7 @@ double		mandelbrot(t_vars *fr, t_cplx c);
 double		julia(t_vars *fr, t_cplx c);
 double		burning_ship(t_vars *fr, t_cplx c);
 double		celtic_mandelbrot(t_vars *fr, t_cplx c);
+void		render_fractal(t_vars *fr);
 // Hooks
 void		set_hooks(t_vars *fr);
 int			key_hook(int key, t_vars *fr);
@@ -80,7 +82,7 @@ int			mouse_hook(int key, int x, int y, t_vars *fr);
 int			ft_exit(t_mlx m);
 // Utils
 t_mlx		init_mlx(void);
-void		render_fractal(t_vars *fr);
+void		ft_put_pixels(t_vars *fr, int x, int y, double ratio);
 void		reset_vars(t_vars *fr);
 double		ft_atod(char *s);
 int			ft_strcmp(char *s1, char *s2);

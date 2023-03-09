@@ -6,7 +6,7 @@
 /*   By: jasahrao <jasahrao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/03 22:03:15 by jasahrao          #+#    #+#             */
-/*   Updated: 2023/03/09 09:55:49 by jasahrao         ###   ########.fr       */
+/*   Updated: 2023/03/09 11:25:23 by jasahrao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,14 +37,14 @@ void	reset_vars(t_vars *fr)
 {
 	set_cplx(&fr->move, -2, 2);
 	fr->scale = 4 / (double)WIN_SIZE;
-	fr->max_iter = MAX_ITERS;
-	fr->color = 10;
+	fr->max_iter = 50.0;
+	fr->shift = 0;
 }
 
 int	ft_exit(t_mlx m)
 {
-	mlx_destroy_window(m.ptr, m.win);
 	mlx_destroy_image(m.ptr, m.img.ptr);
+	mlx_destroy_window(m.ptr, m.win);
 	exit(0);
 	return (0);
 }

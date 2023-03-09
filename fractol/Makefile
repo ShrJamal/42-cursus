@@ -6,7 +6,7 @@
 #    By: jasahrao <jasahrao@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/14 11:58:37 by jasahrao          #+#    #+#              #
-#    Updated: 2023/03/04 17:50:54 by jasahrao         ###   ########.fr        #
+#    Updated: 2023/03/09 11:56:29 by jasahrao         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ NAME	=	fractol
 # Files Variables #
 INCS	=	src/fractol.h
 SRCS 	=	src/main.c\
-			src/fractals/index.c\
+			src/fractals/render.c\
 			src/fractals/julia.c\
 			src/fractals/mandelbrot.c\
 			src/fractals/burning_ship.c\
@@ -26,6 +26,7 @@ SRCS 	=	src/main.c\
 			src/utils/complex.c\
 			src/utils/ft_atod.c\
 			src/utils/mlx.c\
+			src/utils/color.c\
 			src/utils/strings.c
 OBJS 	=	$(SRCS:.c=.o)
 

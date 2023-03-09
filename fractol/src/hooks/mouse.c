@@ -6,7 +6,7 @@
 /*   By: jasahrao <jasahrao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/03 21:26:04 by jasahrao          #+#    #+#             */
-/*   Updated: 2023/03/08 10:15:15 by jasahrao         ###   ########.fr       */
+/*   Updated: 2023/03/09 11:25:23 by jasahrao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,12 @@ static void	zoom(int btn, t_vars *fr, t_cplx p)
 	if (btn == MOUSE_UP)
 	{
 		zoom = 0.8;
-		fr->max_iter += 2;
+		fr->max_iter += 2.0;
 	}
 	else if (btn == MOUSE_DOWN)
 	{
 		zoom = 1.2;
-		fr->max_iter -= 2;
+		fr->max_iter -= 2.0;
 	}
 	else
 		return ;
